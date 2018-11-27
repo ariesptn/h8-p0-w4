@@ -1,21 +1,48 @@
 function changeVocals(str) {
-    //code di sini
+    let result = '';
+    for (s of str) {
+        let sToLowerCase = s.toLowerCase();
+        if (sToLowerCase === 'a' || sToLowerCase === 'e' || sToLowerCase === 'i' || sToLowerCase === 'o' || sToLowerCase === 'u') {
+            result += String.fromCodePoint(s.codePointAt(0) + 1);
+        } else {
+            result += s;
+        }
+    }
+    return result;
 }
 
 function reverseWord(str) {
-    //code di sini
+    return str.split('').reverse().join('');
 }
 
 function setLowerUpperCase(str) {
-    //code di sini
+    let result = '';
+    for (s of str) {
+        if (s === s.toLowerCase()) {
+            result += s.toUpperCase();
+        } else {
+            result += s.toLowerCase();
+        }
+    }
+    return result;
 }
 
 function removeSpaces(str) {
-    //code di sini
+    let result = '';
+    for (s of str) {
+        if (s !== ' ') {
+            result += s;
+        }
+    }
+    return result;
 }
 
 function passwordGenerator(name) {
-    //code di sini
+    if (name.length < 5) {
+        return 'Minimal karakter yang diinputkan adalah 5 karakter';
+    } else {
+        return removeSpaces(setLowerUpperCase(reverseWord(changeVocals(name))));
+    }
 }
 
 console.log(passwordGenerator('Sergei Dragunov')); // 'VPNVGBRdJFGRFs'
