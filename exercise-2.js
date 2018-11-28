@@ -1,5 +1,5 @@
 function fpb(angka1, angka2) {
-    let findFactors = value => {
+    const findFactors = value => {
         let factors = [];
         for (let i = 1; i <= value; i++) {
             if (value % i === 0) {

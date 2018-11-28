@@ -1,5 +1,5 @@
 function urutkanAbjad(str) {
-    let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
     let result = '';
     for (let i = 0; i < alphabet.length; i++) {
         for (let j = 0; j < str.length; j++) {
