@@ -1,11 +1,11 @@
 function changeVocals(str) {
     let result = '';
-    for (s of str) {
-        let sToLowerCase = s.toLowerCase();
+    for (let i = 0; i < str.length; i++) {
+        let sToLowerCase = str[i].toLowerCase();
         if (sToLowerCase === 'a' || sToLowerCase === 'e' || sToLowerCase === 'i' || sToLowerCase === 'o' || sToLowerCase === 'u') {
-            result += String.fromCodePoint(s.codePointAt(0) + 1);
+            result += String.fromCodePoint(str[i].codePointAt(0) + 1);
         } else {
-            result += s;
+            result += str[i];
         }
     }
     return result;
@@ -17,11 +17,11 @@ function reverseWord(str) {
 
 function setLowerUpperCase(str) {
     let result = '';
-    for (s of str) {
-        if (s === s.toLowerCase()) {
-            result += s.toUpperCase();
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i].toLowerCase()) {
+            result += str[i].toUpperCase();
         } else {
-            result += s.toLowerCase();
+            result += str[i].toLowerCase();
         }
     }
     return result;
@@ -29,9 +29,9 @@ function setLowerUpperCase(str) {
 
 function removeSpaces(str) {
     let result = '';
-    for (s of str) {
-        if (s !== ' ') {
-            result += s;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== ' ') {
+            result += str[i];
         }
     }
     return result;

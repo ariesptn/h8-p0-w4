@@ -3,9 +3,9 @@ function sorting(arrNumber) {
         return undefined;
     }
     let max = Number.MIN_SAFE_INTEGER;
-    for (i of arrNumber) {
-        if (i > max) {
-            max = i;
+    for (let i = 0; i < arrNumber.length; i++) {
+        if (arrNumber[i] > max) {
+            max = arrNumber[i];
         }
     }
     return [max, arrNumber];
@@ -16,8 +16,8 @@ function getTotal(arrNumber) {
         return '';
     }
     let total = 0;
-    for (i of arrNumber[1]) {
-        if (i === arrNumber[0]) {
+    for (let i = 0; i < arrNumber[1].length; i++) {
+        if (arrNumber[1][i] === arrNumber[0]) {
             total++;
         }
     }

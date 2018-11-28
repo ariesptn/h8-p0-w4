@@ -4,8 +4,8 @@ function kaliTerusRekursif(angka) {
         return angkaString[0];
     } else {
         let result = 1;
-        for (s of angkaString) {
-            result *= parseInt(s);
+        for (let i = 0; i < angkaString.length; i++) {
+            result *= parseInt(angkaString[i]);
         }
         return kaliTerusRekursif(result);
     }

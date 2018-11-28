@@ -7,14 +7,16 @@ function countProfit(shoppers) {
         return [];
     }
     let data = [];
-    for (i of listBarang) {
+    for (let ii = 0; ii < listBarang.length; ii++) {
+        let i = listBarang[ii];
         data.push(new Object());
         let dataLastIndex = data.length - 1;
         data[dataLastIndex].product = i[0];
         data[dataLastIndex].shoppers = [];
         data[dataLastIndex].leftOver = i[2];
         data[dataLastIndex].totalProfit = 0;
-        for (j of shoppers) {
+        for (let jj = 0; jj < shoppers.length; jj++) {
+            let j = shoppers[jj];
             if (i[0] === j.product && data[dataLastIndex].leftOver >= j.amount) {
                 data[dataLastIndex].shoppers.push(j.name);
                 data[dataLastIndex].leftOver -= j.amount;
