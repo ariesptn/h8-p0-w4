@@ -1,6 +1,6 @@
 function cariModus(arr) {
     let maxIndex = 0;
-    let findTotal = function (index) {
+    let findTotal = index => {
         let total = 0;
         for (let i = 0; i < arr.length; i++) {
             if (arr[i] === arr[index]) {
