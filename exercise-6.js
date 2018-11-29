@@ -1,5 +1,4 @@
 function digitPerkalianMinimum(angka) {
-    let digits = [];
     let lowestDigit = angka.toString() + 1;
     for (let i = 2; i <= Math.round(angka / 2); i++) {
         if (angka % i === 0) {
