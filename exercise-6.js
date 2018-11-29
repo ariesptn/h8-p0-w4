@@ -1,17 +1,15 @@
 function digitPerkalianMinimum(angka) {
     let digits = [];
-    let lowestDigit = Number.MAX_SAFE_INTEGER;
-    for (let i = 1; i <= Math.round(angka / 2); i++) {
+    let lowestDigit = angka.toString() + 1;
+    for (let i = 2; i <= Math.round(angka / 2); i++) {
         if (angka % i === 0) {
-            digits.push(i.toString() + angka / i);
+            let factor = i.toString() + (angka / i);
+            if (factor.length < lowestDigit.length) {
+                lowestDigit = factor;
+            }
         }
     }
-    for (let i = 0; i < digits.length; i++) {
-        if (digits[i].length < lowestDigit) {
-            lowestDigit = digits[i].length;
-        }
-    }
-    return lowestDigit;
+    return lowestDigit.length;
 }
 
 // TEST CASES
