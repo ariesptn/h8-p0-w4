@@ -3,10 +3,11 @@ function changeMe(arr) {
         let name = (i + 1) + '. ' + arr[i][0] + ' ' + arr[i][1];
         let invalidYearString = 'Invalid Birth Year';
         let currentYear = new Date().getFullYear();
-        let data = new Object();
-        data.firstName = arr[i][0];
-        data.lastName = arr[i][1];
-        data.gender = arr[i][2];
+        let data = {
+            firstName: arr[i][0],
+            lastName: arr[i][1],
+            gender: arr[i][2]
+        };
         if (typeof arr[i][3] === 'undefined') {
             data.age = invalidYearString;
         } else if (currentYear < arr[i][3]) {

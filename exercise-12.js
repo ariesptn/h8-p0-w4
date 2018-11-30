@@ -9,12 +9,13 @@ function countProfit(shoppers) {
     let data = [];
     for (let ii = 0; ii < listBarang.length; ii++) {
         let i = listBarang[ii];
-        data.push(new Object());
+        data.push({
+            product: i[0],
+            shoppers: [],
+            leftOver: i[2],
+            totalProfit: 0
+        });
         let dataLastIndex = data.length - 1;
-        data[dataLastIndex].product = i[0];
-        data[dataLastIndex].shoppers = [];
-        data[dataLastIndex].leftOver = i[2];
-        data[dataLastIndex].totalProfit = 0;
         for (let jj = 0; jj < shoppers.length; jj++) {
             let j = shoppers[jj];
             if (i[0] === j.product && data[dataLastIndex].leftOver >= j.amount) {

@@ -22,11 +22,12 @@ function shoppingTime(memberId, money) {
         }
         i++;
     }
-    let data = new Object();
-    data.memberId = memberId;
-    data.money = money;
-    data.listPurchased = purchasedItems;
-    data.changeMoney = moneyLeft;
+    let data = {
+        memberId: memberId,
+        money: money,
+        listPurchased: purchasedItems,
+        changeMoney: moneyLeft
+    };
     return data;
 }
 
