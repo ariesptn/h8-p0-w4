@@ -45,13 +45,13 @@ function printBranch(branches) {
   const month = ['jan', 'feb', 'march', 'april', 'mei', 'jun', 'jul', 'augst', 'sept', 'oct', 'nov', 'dec'];
   let line = '';
   for (let i = 0; i < month.length; i++) {
-    line += month[i] + ' ';
+    line += ' | ' + month[i] + ' ';
     for (let j = 0; j < branches.length; j++) {
-      line += 'Branch-' + parseInt(j + 1) + ' ';
-      line += 'IN ' + branches[j][0][i] + ' '
-      line += 'OUT ' + branches[j][1][i] + ' ';
+      line += '| Branch-' + parseInt(j + 1) + ' ';
+      line += 'IN: ' + branches[j][0][i] + ' '
+      line += '| OUT: ' + branches[j][1][i] + ' ';
     }
-    line += '\n';
+    line += '|\n';
   }
   return line;
 }
