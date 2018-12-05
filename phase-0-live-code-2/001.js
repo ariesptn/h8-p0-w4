@@ -26,9 +26,10 @@ output: jumlah Gold: 1, jumlah Silver: 1, jumlah Bronze: 1. Dan totalnya adalah:
 
 /*PSEUDOCODE
 FUNCTION poinCalculator WITH PARAMETR array
-  STORE 'gold' AS ANY NUMBER
-  STORE 'silver' AS ANY NUMBER
-  STORE 'total' AS ANY NUMBER
+  STORE 'gold' AS 0
+  STORE 'silver' AS 0
+  STORE 'bronze' AS 0
+  STORE 'total' AS 0
   STORE 'i' AS 0
   WHILE 'i' < LENGTH OF 'array' DO
     IF 'array' INDEX 'i' = 'G' THEN
