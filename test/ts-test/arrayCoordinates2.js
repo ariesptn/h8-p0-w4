@@ -1,5 +1,5 @@
 function arrayCoordinates2(input) {
-    let result = {};
+    const result = {};
     for (let h = 0; h < input.length; h++) {
         for (let w = 0; w < input[h].length; w++) {
             if (input[h][w].trim() !== '') {

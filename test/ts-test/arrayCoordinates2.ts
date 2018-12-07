@@ -6,7 +6,7 @@ interface arrayCoordinates2Output {
 }
 
 function arrayCoordinates2(input: Array<Array<string>>): arrayCoordinates2Output {
-    let result: arrayCoordinates2Output = {};
+    const result: arrayCoordinates2Output = {};
     for (let h: number = 0; h < input.length; h++) {
         for (let w: number = 0; w < input[h].length; w++) {
             if (input[h][w].trim() !== '') {

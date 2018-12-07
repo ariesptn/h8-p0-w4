@@ -1,5 +1,5 @@
 function arrayTriangle(size) {
-    let result = [];
+    const result = [];
     for (let h = 0; h < size - 1; h++) {
         result.push([]);
         for (let w = 0; w < size * 2 - 1; w++) {

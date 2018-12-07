@@ -1,12 +1,12 @@
 function topBottom(width) {
-    let result = [];
+    const result = [];
     for (let i = 0; i < width; i++) {
         result.push('x');
     }
     return result;
 }
 function inBetween(width) {
-    let result = ['x'];
+    const result = ['x'];
     for (let i = 0; i < width - 2; i++) {
         result.push('o');
     }
@@ -14,7 +14,7 @@ function inBetween(width) {
     return result;
 }
 function generateSquare(width, height) {
-    let result = [];
+    const result = [];
     result.push(topBottom(width));
     for (let i = 0; i < height - 2; i++) {
         result.push(inBetween(width));
