@@ -1,8 +1,15 @@
-function arrayCoordinates2(input: Array<Array<string>>): Object {
-    let result: Object = {};
+interface arrayCoordinates2Output {
+    [key: string]: {
+        coords: Array<Array<number>>,
+        total: number
+    }
+}
+
+function arrayCoordinates2(input: Array<Array<string>>): arrayCoordinates2Output {
+    let result: arrayCoordinates2Output = {};
     for (let h: number = 0; h < input.length; h++) {
         for (let w: number = 0; w < input[h].length; w++) {
-            if (input[h][w] !== ' ') {
+            if (input[h][w].trim() !== '') {
                 if (result[input[h][w]] === undefined) {
                     result[input[h][w]] = {
                         coords: [[h, w]],
@@ -19,7 +26,7 @@ function arrayCoordinates2(input: Array<Array<string>>): Object {
 }
 
 console.log(arrayCoordinates2([
-    [' ', 'o', ' '],
-    [' ', '*', ' '],
+    [' ', 'o', 'x'],
+    ['+', '*', ' '],
     ['*', ' ', '*']
 ]))

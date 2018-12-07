@@ -1,5 +1,5 @@
-function arrayTriangle(size: number): Array<Array<String>> {
-    let result: Array<Array<String>> = [];
+function arrayTriangle(size: number): Array<Array<string>> {
+    let result: Array<Array<string>> = [];
     for (let h: number = 0; h < size - 1; h++) {
         result.push([]);
         for (let w: number = 0; w < size * 2 - 1; w++) {

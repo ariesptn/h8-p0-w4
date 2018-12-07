@@ -2,7 +2,7 @@ function arrayCoordinates2(input) {
     let result = {};
     for (let h = 0; h < input.length; h++) {
         for (let w = 0; w < input[h].length; w++) {
-            if (input[h][w] !== ' ') {
+            if (input[h][w].trim() !== '') {
                 if (result[input[h][w]] === undefined) {
                     result[input[h][w]] = {
                         coords: [[h, w]],
@@ -19,8 +19,8 @@ function arrayCoordinates2(input) {
     return result;
 }
 console.log(arrayCoordinates2([
-    [' ', 'o', ' '],
-    [' ', '*', ' '],
+    [' ', 'o', 'x'],
+    ['+', '*', ' '],
     ['*', ' ', '*']
 ]));
 //# sourceMappingURL=arrayCoordinates2.js.map
