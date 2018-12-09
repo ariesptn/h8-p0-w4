@@ -50,6 +50,9 @@ class Sudoku {
             return false;
         }
     }
+    getBoard(): Array<Array<number>> {
+        return this.board;
+    }
     getRandomInt(): number {
         return Math.floor(Math.random() * Math.floor(10));
     }
@@ -57,4 +60,4 @@ class Sudoku {
 }
 
 let sudoku = new Sudoku();
-console.log(sudoku.board);
+console.log(sudoku.getBoard());

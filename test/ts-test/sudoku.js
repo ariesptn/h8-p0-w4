@@ -51,10 +51,13 @@ class Sudoku {
             return false;
         }
     }
+    getBoard() {
+        return this.board;
+    }
     getRandomInt() {
         return Math.floor(Math.random() * Math.floor(10));
     }
 }
 let sudoku = new Sudoku();
-console.log(sudoku.board);
+console.log(sudoku.getBoard());
 //# sourceMappingURL=sudoku.js.map
